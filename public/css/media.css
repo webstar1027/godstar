@@ -1,0 +1,106 @@
+@media (max-width: 900px) {
+	.modal-content {
+		width: 90%;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.caption-modal {
+		font-size: 32px;
+		line-height: 32px;
+		margin-bottom: 20px;
+	}
+	.form {
+		margin-bottom: 20px;
+	}
+
+	.social-box a {
+		max-width: 250px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.modal-inside:last-child {
+		padding-top: 20px;
+		text-align: center;
+	}
+
+	.forgot {
+		margin-bottom: 20px;
+	}
+
+	.modal-inside:last-child .modal-item {
+		text-align: center;
+	}
+
+
+	button.close {
+		position: absolute;
+		top: -60px;
+		right: 0px;
+		width: 50px;
+		height: 50px;
+	}
+
+	.a_close_span {
+		margin-left: 0px;
+		margin-top: -9px;
+	}
+	.caption-modal {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+}
+
+@media (max-width: 767px) {
+	.modal-item {
+		margin-left: 3%;
+		margin-right: 3%;
+		width: 94% !important;
+		float: none !important;
+		max-width: initial;
+	}
+
+	.let-resume-text {
+		width: 100% !important;
+	}
+
+	.social-box a {
+		max-width: 100%;
+	}
+
+	.left-modal-inside {
+		padding-bottom: 30px;
+		padding-top: 30px !important;
+	}
+
+	.modal-content {
+		padding: 20px 10px 30px;
+	}
+	.social-box a {
+		padding-left: 50px;
+	}
+	.login-page .modal-content {
+		padding: 20px 10px 30px;
+		border-radius: 20px;
+		height: fit-content;
+		position: absolute;
+		top: 80px;
+		left: 0;
+		right: 0;
+		bottom: initial;
+		transform: translate(0,0);
+		margin: auto;
+	}
+	.resume-page .modal-content {
+		padding: 0 0 30px;
+	}
+	.resume-page .upload-resume-h1 {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		font-size: 40px;
+		color: #212121;
+		line-height: 42px;
+	}
+}

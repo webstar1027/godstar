@@ -1,0 +1,277 @@
+
+    <div class="billing-page">
+        <div class="container">
+            <div>
+                <div class="billing-info-content">
+                    <div class="login-header-logo">
+                        <a href="#!/">
+                            <img src="../../assets/images/logo2.png" alt="">
+                        </a>
+                    </div>
+                    <!--<h4><img src="/assets/images/clock-icon.png" alt="">We're holding the reservation for the next {{ timeInMsSec }} minutes</h4>-->
+                    <div class="header-text">
+                        <h2 class="text-center">Let's finish setting you up!</h2>
+                        <h5 class="text-center">Select payment method and type your billing info</h5>
+                    </div>
+                    <div class="row bs-wizard" style="border-bottom:0;">
+                        <div class="col-xs-4 bs-wizard-step complete">
+                            <div class="progress">
+                                <div class="progress-bar a_progress_par green-progress-bar"></div>
+                            </div>
+                            <div class="text-center bs-wizard-stepnum active active_text_color_new">Upload</div>
+                            <p class="bs-wizard-dot billing_a_icons_a activ_step_new_greenn">
+                                <i class="fa fa-upload billing_a_icons_a_icon active_text_color_new" aria-hidden="true"></i>
+                                <!--<img class="billing_a_icons_a_icon_img" ng-src="img/3.png" alt="">-->
+                            </p>
+                        </div>
+                        <div class="col-xs-4 bs-wizard-step complete b_progress_half"><!-- complete -->
+                            <div class="progress">
+                                <div class="b_progress_par green-progress-bar"></div>
+                                <div class="b_progress_par_two"></div>
+                            </div>
+                            <div class="text-center bs-wizard-stepnum active active_text_color_new">Payment</div>
+                            <p class="bs-wizard-dot billing_a_icons_a activ_step_new_greenn">
+                                <i class="fa fa-usd billing_a_icons_a_icon billing_a_icons_a_icon_usd active_text_color_new" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                        <div class="col-xs-4 bs-wizard-step active"><!-- complete -->
+                            <div class="progress"><div class="progress-bar c_progress_par"></div></div>
+                            <div class="text-center bs-wizard-stepnum">Confirmation</div>
+                            <p class="bs-wizard-dot billing_a_icons_a">
+                                <i class="fa fa-check billing_a_icons_a_icon" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="header-text">
+                        <div class="row">
+                            <div class="col-sm-4 col-sm-offset-1">
+                                <div class="select-item pull-right billing-page-select-item">
+                                    <div class="select-item-header">
+                                        <p>Bring Your Resume To Life!</p>
+                                        <h2>$29.99 one time fee.</h2>
+                                    </div>
+                                    <div class="select-item-content">
+                                        <ul>
+                                            <li class="active">Save time and effort creating your resume</li>
+                                            <li class="active">Resume templates approved by recruiters</li>
+                                            <li class="active">Kick-start your dream job career</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="select-item billing-page-select-item">
+                                    <div class="panel-body">
+                                        <div class="btn-group btn-group-picker" role="group">
+                                            <a class="btn btn-provider btn-provider-premium selected" ng-click="paymentStripe()">
+                                                <div class="first-separator">
+                                                    <span class="icon-provider visa">visa</span>
+                                                    <span class="icon-provider mastercard">mastercard</span>
+                                                    <span class="icon-provider amex">amex</span>
+                                                </div>
+                                            </a>
+                                            <a class="btn btn-provider btn-provider-premium" ng-click="paymentPayPal()">
+                                                <div>
+                                                    <span class="icon-provider paypal">paypal</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="offer-panel-form">
+                                            <div class="error-container alert alert-danger" style="display: none;"><ul></ul></div>
+                                            <form id="form-main-pci-credit-card" class="new-payment-form">
+                                                <form name="myForm" class="new-payment-form" id="payment-form" ng-controller="billingController">
+
+                                                    <div ng-style="errorCodeValidationMessage" class="billing_error_card_messages">
+                                                        <span class="errorCodeValidationMessageSpan"><i class="fa fa-circle validation_message_card_circle" aria-hidden="true"></i> {{ errorCardMessage }}</span>
+                                                    </div>
+
+                                                    <div ng-if="stripePayment" class="row">
+                                                        <div class="col-xs-12">
+                                                            <div class="form-group">
+                                                                <label for="cardnumber" class="card-label">
+                                                                    <span>Full Name</span>
+                                                                </label>
+                                                                <span>
+                                                                    <input ng-model="$parent.fullName" placeholder="Full Name" class="form-control">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div ng-if="stripePayment" class="row">
+                                                        <div class="col-xs-12">
+                                                            <div class="form-group">
+                                                                <label for="cardnumber" class="card-label">
+                                                                    <span id="trans-cardnumber">Card number</span>
+                                                                </label>
+                                                                <span class="safe-field">
+                                                                    <input ng-model="$parent.cardNumber" id="cardnumber" maxlength="19" minlength="19" autocomplete="cc-number" type="tel" pattern="[0-9]*" placeholder="1111 2222 3333 4444" data-encrypted-name="number" class="form-control">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div ng-if="stripePayment" class="row">
+                                                        <div class="col-xs-12">
+                                                            <div class="form-group">
+                                                                <label id="trans-expiration_date">Expiry date</label>
+                                                                <div class="row">
+                                                                    <div class="col-xs-6">
+                                                                        <select ng-model="$parent.expMonth" id="expiry-month" autocomplete="cc-exp-month" data-encrypted-name="expiryMonth" class="form-control">
+                                                                            <option id="trans-label_month" value="" default="default" selected="selected">Month</option>
+                                                                            <option value="1">01</option>
+                                                                            <option value="2">02</option>
+                                                                            <option value="3">03</option>
+                                                                            <option value="4">04</option>
+                                                                            <option value="5">05</option>
+                                                                            <option value="6">06</option>
+                                                                            <option value="7">07</option>
+                                                                            <option value="8">08</option>
+                                                                            <option value="9">09</option>
+                                                                            <option value="10">10</option>
+                                                                            <option value="11">11</option>
+                                                                            <option value="12">12</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-xs-6">
+                                                                        <select ng-model="$parent.expYear" id="expiry-year" autocomplete="cc-exp-year" data-encrypted-name="expiryYear" class="form-control">
+                                                                            <option id="trans-label_year" value="" default="" selected="selected">Year</option>
+                                                                            <option value="2017">2017</option>
+                                                                            <option value="2018">2018</option>
+                                                                            <option value="2019">2019</option>
+                                                                            <option value="2020">2020</option>
+                                                                            <option value="2021">2021</option>
+                                                                            <option value="2022">2022</option>
+                                                                            <option value="2023">2023</option>
+                                                                            <option value="2024">2024</option>
+                                                                            <option value="2025">2025</option>
+                                                                            <option value="2026">2026</option>
+                                                                            <option value="2027">2027</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div ng-if="stripePayment" class="row">
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label id="trans-security_code" for="security-code" class="contain-tooltip" data-toggle="tooltip" title="The security code is the last 3 numbers on the back of your card(4 numbers on the front if Amex)" data-lang="cvc_info">Security code</label>
+                                                                <span class="safe-field">
+                                                                    <input ng-model="$parent.cvv" id="security-code" autocomplete="off" type="tel" pattern="[0-9]*" placeholder="" data-encrypted-name="cvc" class="form-control">
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label id="trans-label_postal_code" for="zip-code">Zip code</label>
+                                                                <input ng-model="$parent.pzip" id="zip-code" name="zip-code" autocomplete="off" type="tel" pattern="[0-9]*" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div ng-if="!stripePayment" class="row">
+                                                        <div class="col-xs-6">
+                                                            <div class="form-group">
+                                                                <label id="trans-label_postal_code" for="zip-code">Zip code</label>
+                                                                <input ng-model="$parent.pzipPaypal" id="zip-code" name="zip-code" autocomplete="off" type="tel" pattern="[0-9]*" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+
+                                                <p class="uu_error_message_g" ng-style="errorMessageWhenInputClear">Input Field Clear!!!</p>
+
+                                                <button  ng-if="stripePayment" ng-click="selectHostingPlan()" data-type="purchase" class="btn btn-block btn-green btn-premium purchasebutton purchasebutton_a">
+                                                    Create my resume now
+                                                    <span class="ajax-spinner hide"></span>
+                                                </button>
+
+                                                <button  ng-if="!stripePayment" ng-click="selectPayPalPlan()" data-type="purchase" class="btn btn-block btn-green btn-premium purchasebutton purchasebutton_a">
+                                                    Create my resume now
+                                                    <span class="ajax-spinner hide"></span>
+                                                </button>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="logos-image-content">
+                            <div class="item text-center">
+                                <a href="">
+                                    <img src="/assets/images/ssl-secured.png" alt="">
+                                </a>
+                            </div>
+                            <div class="item text-center">
+                                <a href="">
+                                    <img src="/assets/images/truste.png" alt="">
+                                </a>
+                            </div>
+                            <div class="item text-center">
+                                <a href="">
+                                    <img src="/assets/images/duarantee.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2 third-col"></div>
+            </div>
+        </div>
+    </div>
+    <footer class="hidden-md hidden-lg hidden-sm hidden-xs">
+        <div class="content">
+            <div class="footer-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="item">
+                                <p>+961311566</p>
+                                <p><a href="">info@moodfit.com</a></p>
+                                <p class="icons-content">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="item">
+                                <p><a href="#!/about">About</a></p>
+                                <p><a href="#!/privacy-policy">Privacy Policy</a></p>
+                                <p><a href="#!/terms-of-use">Terms of use</a></p>
+                                <p><a href="#!/contact-us">Contact Us</a></p>
+                                <p><a href="#!/faq">FAQ</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p class="text-center">Copyright 2017. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function(){
+            window.scrollTo(0, 0);
+            $('[data-toggle="tooltip"]').tooltip();
+
+            $(document).on('keypress', '#cardnumber', function() {
+                var value = $(this).val();
+                if(value.length == 4) {
+                    var currentValue = $(this).val();
+                    $(this).val(currentValue + ' ');
+                }
+                if(value.length == 9) {
+                    var currentValue = $(this).val();
+                    $(this).val(currentValue + ' ');
+                }
+                if(value.length == 14) {
+                    var currentValue = $(this).val();
+                    $(this).val(currentValue + ' ');
+                }
+            })
+        })
+    </script>

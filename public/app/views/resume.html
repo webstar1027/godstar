@@ -1,0 +1,216 @@
+<div class="wrapper login-page resume-page" ng-controller="loginController">
+    <!--==== MODAL ====-->
+    <div class="container">
+        <div  ng-click="aDontClosePage()" class="a_new_dialog" role="document">
+            <div>
+                <div class="login-header-logo">
+                    <a href="#!/">
+                        <img src="../../assets/images/logo2.png" alt="">
+                    </a>
+                </div>
+                <div>
+                    <div class="billing-info-content-top">
+                        <h1>Get started by uploading your information</h1>
+                        <!--<div class="row bs-wizard" style="border-bottom:0;">-->
+                            <!--<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3  bs-wizard-step complete col-xs-offset-2 col-sm-offset-2 col-lg-offset-2 col-md-offset-2">-->
+                                <!--<div class="progress"><div class="progress-bar"></div></div>-->
+                                <!--<div class="text-center bs-wizard-stepnum active">Enter Info</div>-->
+                                <!--<a  class="bs-wizard-dot activ_step"></a>-->
+                            <!--</div>-->
+                            <!--<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bs-wizard-step complete">&lt;!&ndash; complete &ndash;&gt;-->
+
+                                <!--<div class="progress"><div class="progress-bar"></div></div>-->
+                                <!--<div class="text-center bs-wizard-stepnum">Billing</div>-->
+                                <!--<a  class="bs-wizard-dot"></a>-->
+                            <!--</div>-->
+
+                            <!--<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bs-wizard-step active">&lt;!&ndash; complete &ndash;&gt;-->
+
+                                <!--<div class="progress"><div class="progress-bar"></div></div>-->
+                                <!--<div class="text-center bs-wizard-stepnum">Site In Progress</div>-->
+                                <!--<a  class="bs-wizard-dot"></a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <div class="row bs-wizard" style="border-bottom:0;">
+                            <div class="col-xs-4 bs-wizard-step complete">
+                                <div class="progress">
+                                    <div class="progress-bar f_progress_par"></div>
+                                </div>
+                                <!--<div class="text-center bs-wizard-stepnum active active_text_color">Upload</div>-->
+                                <div class="text-center bs-wizard-stepnum active active_text_color_new">Upload</div>
+                                <p class="bs-wizard-dot billing_a_icons_a activ_step_new_greenn">
+                                    <i class="fa fa-upload billing_a_icons_a_icon active_text_color_new" aria-hidden="true"></i>
+                                </p>
+                            </div>
+                            <div class="col-xs-4 bs-wizard-step complete b_progress_half"><!-- complete -->
+                                <div class="progress">
+                                    <div class="e_progress_par"></div>
+                                    <div class="b_progress_par_two"></div>
+                                </div>
+                                <div class="text-center bs-wizard-stepnum">Payment</div>
+                                <p class="bs-wizard-dot billing_a_icons_a">
+                                    <i class="fa fa-usd billing_a_icons_a_icon billing_a_icons_a_icon_usd" aria-hidden="true"></i>
+                                </p>
+                            </div>
+                            <div class="col-xs-4 bs-wizard-step active"><!-- complete -->
+                                <div class="progress"><div class="progress-bar c_progress_par"></div></div>
+                                <div class="text-center bs-wizard-stepnum">Confirmation</div>
+                                <p class="bs-wizard-dot billing_a_icons_a">
+                                    <i class="fa fa-check billing_a_icons_a_icon" aria-hidden="true"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="resume-items-content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-4 resume-img-item">
+                                        <div class="resume-img-item-img">
+                                            <img src="../../assets/images/img1.svg" alt="">
+                                        </div>
+                                        <p>We receive your information</p>
+                                    </div>
+                                    <div class="col-sm-4 resume-img-item">
+                                        <div class="resume-img-item-img">
+                                            <img src="../../assets/images/img2.svg" alt="">
+                                        </div>
+                                        <p class="hidden-xs">Relax while we develop your resume site</p>
+                                        <p class="visible-xs">Relax while we develop <br>your resume site</p>
+                                    </div>
+                                    <div class="col-sm-4 resume-img-item">
+                                        <div class="resume-img-item-img">
+                                            <img src="../../assets/images/img3.svg" alt="">
+                                        </div>
+                                        <p>Get noticed by recruiters & employers </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form enctype="multipart/form-data">
+
+                            <!--<input type=file ng-model="formData" my-files="files" onchange="angular.element(this).scope().upload()" class="form-control a_upload_input" id ="myFileField"/>-->
+                            <!--<button style="display: none;" ng-click="upload()"></button>-->
+                            <!--<p ng-class=" (responseSuccess)? 'p_a_hidden_success' :'p_a_hidden_error'">ok</p>-->
+
+                            <div class="splash-upload-or-create sg-text-center form-group splash-button-variation row">
+                                <div class="col-sm-6">
+                                    <div class="splash-vertical-upload-group">
+                                        <div class="splash-upload text-center">
+                                            <label ng-style="myStyleDivice" ng-click="fromMyDivaceTwo()" class="btn blue-btn see-templates-btn upload-resume-btn">
+                                                <span>Upload Resume</span>
+                                                <!--<input class="hidden" name="fileData" type="file">-->
+                                                <input type=file ng-model="formData" my-files="files" onchange="angular.element(this).scope().upload()" class="form-control a_upload_input" id ="myFileField"/>
+                                            </label>
+                                        </div>
+                                        <h4 class="splash-button-subtext">
+                                            <span> </span>
+                                            <span>We will fill in your details</span>
+                                        </h4>
+                                    </div>
+                                    <div class="splash-or-a hidden-xs">OR</div>
+                                </div>
+                                <div class="splash-or vertical-button-or visible-xs">or</div>
+                                <!--<div class="splash-or vertical-button-or">or</div>-->
+                                <div class="col-sm-6">
+                                    <div class="splash-vertical-create-group">
+                                        <div class="splash-create text-center">
+                                            <button ng-style="myStyleLinkedin" ng-click="fromMyLinkedin()" class="btn blue-btn see-templates-btn upload-resume-btn">Upload from LinkedIn</button>
+                                        </div>
+                                        <h4 class="splash-button-subtext">
+                                            <span> </span>
+                                            <span>Transfer profile with 1 click</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 ng-if="ifLinkedinUser()" class="splash-button-subtext upload-letter text-center">
+                                <p ng-click="UploadLeterToBilling()">Upload Later</p>
+                            </h4>
+                        </form>
+                    </div>
+
+                    <!--</div>-->
+                    <!--<h1 class="caption-modal text-center a_upload_your_resume upload-resume-h1">Upload Your Resume</h1>
+                    <div class="modal-inside clearfix">
+                        &lt;!&ndash;{{ linkedinResumeInfo}}&ndash;&gt;
+                        <div class="modal-item pull-left a_pull_item_left">
+                            <form class="form" enctype="multipart/form-data">
+                                <input type=file ng-model="formData" my-files="files" onchange="angular.element(this).scope().upload()" class="form-control a_upload_input" id ="myFileField"/>
+                                &lt;!&ndash;<button ng-click="upload()">awefwefwerwr</button>&ndash;&gt;
+                                <p ng-class=" (responseSuccess)? 'p_a_hidden_success' :'p_a_hidden_error'">ok</p>
+                                <button ng-style="myStyleDivice" ng-click="fromMyDivace()" class="submit a_button_margin_bottom">From My Device</button>
+                                <button ng-style="myStyleLinkedin" ng-click="fromMyLinkedin()" class="submit a_button_margin_bottom form_linkedin_btn">From My Linkedin</button>
+                                <button id="uplad_leter_id" ng-style="myStyleUploadLeter"  ng-click="UploadLeterToBilling()"  class="submit a_button_margin_bottom a_button_margin_bottom_unique">Upload Later</button>
+                            </form>
+
+                        </div>
+                        <div class="modal-item pull-left a_vertical_line_upload hidden-sm hidden-xs"></div>
+                        <div class="modal-item pull-right a_pull_item_right">
+                            <form class="form">
+                                &lt;!&ndash;<h4 class="dont-have-resume">Don't Have a Resume?</h4>&ndash;&gt;
+                                <p class="text-center a_text_center_font let-resume-text">After you have selected an upload option please click continue to processed</p>
+                                &lt;!&ndash;<input ng-model="$parent.necessoryEmail" type="email" placeholder="Your Email" name="email" ng-model="r_email" required>&ndash;&gt;
+                                <button ng-style="myStyle"  ng-click="continueToBilling()" class="submit a_button_margin_bottom">Continue</button>
+                            </form>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==== END MODAL ====-->
+</div>
+
+<footer class="hidden-lg hidden-md hidden-sm hidden-xs">
+    <div class="content">
+        <div class="footer-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="item">
+                            <img class="footer-logo-img" src="../assets/images/logo2.png">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="item">
+                            <p>+961311566</p>
+                            <p><a href="">info@moodfit.com</a></p>
+                            <p class="icons-content">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="item">
+                            <p><a href="#!/about">About</a></p>
+                            <p><a href="#!/privacy-policy">Privacy Policy</a></p>
+                            <p><a href="#!/terms-of-use">Terms of use</a></p>
+                            <p><a href="#!/contact-us">Contact Us</a></p>
+                            <p><a href="#!/faq">FAQ</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p class="text-center">Copyright 2017. All rights reserved</p>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://platform.linkedin.com/in.js">
+ //   api_key: 78ko2txzlnf7ln
+    api_key: 868gg3hylwhij0
+    authorize: false
+    //    onLoad: LinkedinService.signInLinkedinFunction();
+</script>
+
+<script>
+    $(document).ready(function(){
+        window.scrollTo(0, 0);
+    })
+</script>
+
+

@@ -1,0 +1,407 @@
+
+
+<div class="billing-page domain-name-page billing-page-background" ng-controller="billingController">
+    <!--<div class="left-side">-->
+        <!--<img src="/assets/images/logo3.png" class="logo" alt="">-->
+        <!--<h4>Special Offers</h4>-->
+        <!--<ul class="domain-hosting-menu">-->
+            <!--<li><a href="">Hosting</a></li>-->
+            <!--<li class="active"><a href="">Domain</a></li>-->
+            <!--<li><a href="">Mailbox</a></li>-->
+        <!--</ul>-->
+        <!--<div class="customers-content">-->
+            <!--<h5>Join over 10,000 happy customers!</h5>-->
+            <!--<slick  arrows = "false"-->
+                    <!--dots = "true"-->
+                    <!--slides-to-show =  1-->
+                    <!--slides-to-scroll = 1-->
+                    <!--speed = 1000>-->
+                <!--<div class="text-center">-->
+                    <!--<img class="customer-photo" src="assets/images/customer.png" alt="" />-->
+                    <!--<h6 class="customer-name">Mark Renton</h6>-->
+                    <!--<p class="customer-description">Intuitive website. Best online resume & cover letter builder. Employeers are responsive. Should you have any concern question, you can interract with them.</p>-->
+                <!--</div>-->
+                <!--<div class="text-center">-->
+                    <!--<img class="customer-photo" src="assets/images/customer.png" alt="" />-->
+                    <!--<h6 class="customer-name">Mark Renton</h6>-->
+                    <!--<p class="customer-description">Intuitive website. Best online resume & cover letter builder. Employeers are responsive. Should you have any concern question, you can interract with them.</p>-->
+                <!--</div>-->
+                <!--<div class="text-center">-->
+                    <!--<img class="customer-photo" src="assets/images/customer.png" alt="" />-->
+                    <!--<h6 class="customer-name">Mark Renton</h6>-->
+                    <!--<p class="customer-description">Intuitive website. Best online resume & cover letter builder. Employeers are responsive. Should you have any concern question, you can interract with them.</p>-->
+                <!--</div>-->
+                <!--<div class="text-center">-->
+                    <!--<img class="customer-photo" src="assets/images/customer.png" alt="" />-->
+                    <!--<h6 class="customer-name">Mark Renton</h6>-->
+                    <!--<p class="customer-description">Intuitive website. Best online resume & cover letter builder. Employeers are responsive. Should you have any concern question, you can interract with them.</p>-->
+                <!--</div>-->
+            <!--</slick>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="container">
+        <div>
+            <div class="login-header-logo">
+                <a href="#!/">
+                    <img src="assets/images/logo.png" class="header-logo-img">
+                </a>
+            </div>
+            <div class="billing-info-content">
+
+
+                <!--<div class="row bs-wizard hidden-xs" style="border-bottom:0;">-->
+                    <!--<div class="col-xs-4 bs-wizard-step complete">-->
+                        <!--<div class="progress">-->
+                            <!--<div class="progress-bar a_progress_par"></div>-->
+                        <!--</div>-->
+                        <!--<div class="text-center bs-wizard-stepnum active">Enter Info</div>-->
+                        <!--<a  class="bs-wizard-dot activ_step"></a>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-4 bs-wizard-step complete b_progress_half">&lt;!&ndash; complete &ndash;&gt;-->
+                        <!--<div class="progress">-->
+                            <!--<div class="b_progress_par"></div>-->
+                            <!--<div class="b_progress_par_two b_progress_par_two_domen"></div>-->
+                        <!--</div>-->
+                        <!--<div class="text-center bs-wizard-stepnum active">Billing</div>-->
+                        <!--<a  class="bs-wizard-dot activ_step"></a>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-4 bs-wizard-step active">&lt;!&ndash; complete &ndash;&gt;-->
+                        <!--<div class="progress"><div class="progress-bar c_progress_par d_hosting_process"></div></div>-->
+                        <!--<div class="text-center bs-wizard-stepnum active">Site In Progress</div>-->
+                        <!--<a  class="bs-wizard-dot activ_step"></a>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <div class="domain-name-content">
+                    <h3>Get a Custom Domain Name for Your Resume</h3>
+                    <h4 class="">Replace <a class="color_bright_red_ff"><span ng-bind="user.name | myFormat" class="text-lowercase"></span><span class="text-lowercase">.hiprez.com</span></a> with your own site address</h4>
+                    <form class="domain-name-form" ng-submit="submitGGfunction()">
+                        <div class="domain-name-form-item vv_position_search">
+                            <input ng-style="domainInputColorGr" ng-model="domainName" ng-change="chandeDomainGGfunction()" type="text" placeholder="johnsmith.com">
+                            <input class="domain_page_input_search_value" ng-style="backgroudColorGreen" ng-model="searchNameInput" type="button" ng-click="domainNameCheap()" value="{{searchNameInput}}">
+                            <img ng-style="gifSearch" class="gif_wait_search" ng-src="img/giphy.gif" alt="">
+                            <div  ng-style="noValidDisplayBlock" ng-if="notValidDomainName" class="no-valid-message text-center">
+                                <p><span>{{ domainNameIsset }} </span> is not available! </p>
+                            </div>
+                            <div ng-if="notValidDomainNameTrue" class="text-center ok-valid-message">
+                                <p>
+                                    <span class="fontsize_aviable">{{ domainNameIsset }} </span><span class="color_white_text_a_f"> is available now for $19.99/year</span>
+                                </p>
+                                <!--<button class="btn btn-success" ng-click="buyDomainNow()">Get it!</button>-->
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <p class="text-center color_white_text_a_f  color_white_text_a_f_m color_white_text_a_f_w">
+                            <a href="/#!/timelimite">No thanks, I like my HipRez domain</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 hidden-sm"></div>
+        </div>
+        <div class="help-content col-md-offset-3">
+            <!--<p >Need Help? <a href="" class="color_white_text_a">Contact </a>HipRez support</p>-->
+        </div>
+
+
+        <!--<div class="row">-->
+            <!--<div class="customers-content xs-customer hidden-sm hidden-md hidden-lg">-->
+                <!--<h5>Join over 10,000 happy customers!</h5>-->
+                <!--<slick  arrows = "false"-->
+                        <!--dots = "true"-->
+                        <!--slides-to-show =  1-->
+                        <!--slides-to-scroll = 1-->
+                        <!--speed = 1000>-->
+                    <!--<div class="text-center">-->
+                        <!--<img class="customer-photo" src="assets/images/customer.png" alt="" />-->
+                        <!--<h6 class="customer-name">Mark Renton</h6>-->
+                        <!--<p class="customer-description">Intuitive website. Best online resume & cover letter builder. Employeers are responsive. Should you have any concern question, you can interract with them.</p>-->
+                    <!--</div>-->
+                    <!--<div class="text-center">-->
+                        <!--<img class="customer-photo" src="assets/images/customer.png" alt="" />-->
+                        <!--<h6 class="customer-name">Mark Renton</h6>-->
+                        <!--<p class="customer-description">Intuitive website. Best online resume & cover letter builder. Employeers are responsive. Should you have any concern question, you can interract with them.</p>-->
+                    <!--</div>-->
+                    <!--<div class="text-center">-->
+                        <!--<img class="customer-photo" src="assets/images/customer.png" alt="" />-->
+                        <!--<h6 class="customer-name">Mark Renton</h6>-->
+                        <!--<p class="customer-description">Intuitive website. Best online resume & cover letter builder. Employeers are responsive. Should you have any concern question, you can interract with them.</p>-->
+                    <!--</div>-->
+                    <!--<div class="text-center">-->
+                        <!--<img class="customer-photo" src="assets/images/customer.png" alt="" />-->
+                        <!--<h6 class="customer-name">Mark Renton</h6>-->
+                        <!--<p class="customer-description">Intuitive website. Best online resume & cover letter builder. Employeers are responsive. Should you have any concern question, you can interract with them.</p>-->
+                    <!--</div>-->
+                <!--</slick>-->
+            <!--</div>-->
+
+        <!--</div>-->
+    </div>
+</div>
+
+<!--<footer>-->
+    <!--<div class="content">-->
+        <!--<div class="footer-content">-->
+            <!--<div class="container-fluid">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<div class="item">-->
+                            <!--<img class="footer-logo-img" src="../assets/images/logo2.png">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<div class="item">-->
+                            <!--<p>+961311566</p>-->
+                            <!--<p><a href="">info@moodfit.com</a></p>-->
+                            <!--<p class="icons-content">-->
+                                <!--<i class="fa fa-facebook" aria-hidden="true"></i>-->
+                                <!--<i class="fa fa-instagram" aria-hidden="true"></i>-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<div class="item">-->
+                            <!--<p><a href="#!/about">About</a></p>-->
+                            <!--<p><a href="#!/privacy-policy">Privacy Policy</a></p>-->
+                            <!--<p><a href="#!/terms-of-use">Terms of use</a></p>-->
+                            <!--<p><a href="#!/contact-us">Contact Us</a></p>-->
+                            <!--<p><a href="#!/faq">FAQ</a></p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="footer-copyright">-->
+            <!--<p class="text-center">Copyright 2017. All rights reserved</p>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</footer>-->
+<script>
+    $(document).ready(function(){
+        $(window).scrollTop(0);
+    })
+</script>
+
+
+
+
+<footer class="hidden-md hidden-lg hidden-sm hidden-xs">
+    <div class="content">
+        <div class="footer-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="item">
+                            <img class="footer-logo-img" src="../assets/images/logo2.png">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="item">
+                            <p>+961311566</p>
+                            <p><a href="">info@moodfit.com</a></p>
+                            <p class="icons-content">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="item">
+                            <p><a href="#!/about">About</a></p>
+                            <p><a href="#!/privacy-policy">Privacy Policy</a></p>
+                            <p><a href="#!/terms-of-use">Terms of use</a></p>
+                            <p><a href="#!/contact-us">Contact Us</a></p>
+                            <p><a href="#!/faq">FAQ</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p class="text-center">Copyright 2017. All rights reserved</p>
+        </div>
+    </div>
+</footer>
+
+
+<!--<div class="billing-page domain-name-page">-->
+    <!--<div class="left-side">-->
+        <!--<img src="/assets/images/logo3.png" class="logo" alt="">-->
+        <!--<h4>Special Offers</h4>-->
+        <!--<ul class="domain-hosting-menu">-->
+            <!--<li><a href="">Hosting</a></li>-->
+            <!--<li class="active"><a href="">Domain</a></li>-->
+            <!--<li><a href="">Mailbox</a></li>-->
+        <!--</ul>-->
+        <!--<div class="customers-content">-->
+            <!--<h5>Join over 10,000 happy customers!</h5>-->
+            <!--<slick  arrows = "false"-->
+                    <!--dots = "true"-->
+                    <!--slides-to-show =  1-->
+                    <!--slides-to-scroll = 1-->
+                    <!--speed = 1000>-->
+                <!--<div class="text-center">-->
+                    <!--<img class="customer-photo" src="assets/images/customer.png" alt="" />-->
+                    <!--<h6 class="customer-name">Mark Renton</h6>-->
+                    <!--<p class="customer-description">Intuitive website. Best online resume & cover letter builder. Employeers are responsive. Should you have any concern question, you can interract with them.</p>-->
+                <!--</div>-->
+                <!--<div class="text-center">-->
+                    <!--<img class="customer-photo" src="assets/images/customer.png" alt="" />-->
+                    <!--<h6 class="customer-name">Mark Renton</h6>-->
+                    <!--<p class="customer-description">Intuitive website. Best online resume & cover letter builder. Employeers are responsive. Should you have any concern question, you can interract with them.</p>-->
+                <!--</div>-->
+                <!--<div class="text-center">-->
+                    <!--<img class="customer-photo" src="assets/images/customer.png" alt="" />-->
+                    <!--<h6 class="customer-name">Mark Renton</h6>-->
+                    <!--<p class="customer-description">Intuitive website. Best online resume & cover letter builder. Employeers are responsive. Should you have any concern question, you can interract with them.</p>-->
+                <!--</div>-->
+                <!--<div class="text-center">-->
+                    <!--<img class="customer-photo" src="assets/images/customer.png" alt="" />-->
+                    <!--<h6 class="customer-name">Mark Renton</h6>-->
+                    <!--<p class="customer-description">Intuitive website. Best online resume & cover letter builder. Employeers are responsive. Should you have any concern question, you can interract with them.</p>-->
+                <!--</div>-->
+            <!--</slick>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="right-side">-->
+        <!--<div class="row">-->
+            <!--<div class="col-xs-12 hidden-sm hidden-md hidden-lg xs-header-content">-->
+                <!--<img src="/assets/images/logo4.png" class="logo" alt="">-->
+                <!--<div class="menu-icon" id="domain-menu"></div>-->
+                <!--<div class="domain-menu menu-content">-->
+                    <!--<ul>-->
+                        <!--<li><a href="">Hosting</a></li>-->
+                        <!--<li><a href="">Domain</a></li>-->
+                        <!--<li><a href="">Mailbox</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="clearfix"></div>-->
+            <!--<div class="hidden-xs">-->
+                <!--<a href="" class="back-a"><i class="fa fa-angle-left" aria-hidden="true"></i> Back to Hosting</a>-->
+            <!--</div>-->
+            <!--<div class="col-md-10 col-md-offset-1 col-sm-12 billing-info-content">-->
+                <!--<div class="row bs-wizard hidden-xs" style="border-bottom:0;">-->
+                    <!--<div class="col-xs-4 bs-wizard-step complete">-->
+                        <!--<div class="progress"><div class="progress-bar"></div></div>-->
+                        <!--<div class="text-center bs-wizard-stepnum active">Enter Info</div>-->
+                        <!--<a href="#" class="bs-wizard-dot activ_step"></a>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-4 bs-wizard-step complete">&lt;!&ndash; complete &ndash;&gt;-->
+                        <!--<div class="progress"><div class="progress-bar"></div></div>-->
+                        <!--<div class="text-center bs-wizard-stepnum active">Billing</div>-->
+                        <!--<a href="#" class="bs-wizard-dot"></a>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-4 bs-wizard-step active">&lt;!&ndash; complete &ndash;&gt;-->
+                        <!--<div class="progress"><div class="progress-bar"></div></div>-->
+                        <!--<div class="text-center bs-wizard-stepnum">Site In Progress</div>-->
+                        <!--<a href="#" class="bs-wizard-dot"></a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="domain-name-content">-->
+                    <!--<h3>Get a Domain Name for Your Site</h3>-->
+                    <!--<h4>Replace <a href="">alexkvilmar.hiprez.com/123456 </a>with your own site address</h4>-->
+                    <!--<form action="" class="domain-name-form">-->
+                        <!--<div class="domain-name-form-item">-->
+                            <!--<input type="text" placeholder="hiprex.xyz">-->
+                            <!--<input type="submit" value="Search" id="domainNameSubmit">-->
+                            <!--<div class="no-valid-message text-center">-->
+                                <!--<img src="/assets/images/close-icon.png" alt="">-->
+                                <!--<p><span>alexkvalmar.com </span>is not available!</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</form>-->
+                    <!--<a href=""><h6>No Thanks, I Like My HipRez Domain</h6></a>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-md-1 hidden-sm"></div>-->
+        <!--</div>-->
+        <!--<div class="help-content">-->
+            <!--<p>Need Help? <a href="">Contact </a>HipRez support</p>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="customers-content xs-customer hidden-sm hidden-md hidden-lg">-->
+                <!--<h5>Join over 10,000 happy customers!</h5>-->
+                <!--<slick  arrows = "false"-->
+                        <!--dots = "true"-->
+                        <!--slides-to-show =  1-->
+                        <!--slides-to-scroll = 1-->
+                        <!--speed = 1000>-->
+                    <!--<div class="text-center">-->
+                        <!--<img class="customer-photo" src="assets/images/customer.png" alt="" />-->
+                        <!--<h6 class="customer-name">Mark Renton</h6>-->
+                        <!--<p class="customer-description">Intuitive website. Best online resume & cover letter builder. Employeers are responsive. Should you have any concern question, you can interract with them.</p>-->
+                    <!--</div>-->
+                    <!--<div class="text-center">-->
+                        <!--<img class="customer-photo" src="assets/images/customer.png" alt="" />-->
+                        <!--<h6 class="customer-name">Mark Renton</h6>-->
+                        <!--<p class="customer-description">Intuitive website. Best online resume & cover letter builder. Employeers are responsive. Should you have any concern question, you can interract with them.</p>-->
+                    <!--</div>-->
+                    <!--<div class="text-center">-->
+                        <!--<img class="customer-photo" src="assets/images/customer.png" alt="" />-->
+                        <!--<h6 class="customer-name">Mark Renton</h6>-->
+                        <!--<p class="customer-description">Intuitive website. Best online resume & cover letter builder. Employeers are responsive. Should you have any concern question, you can interract with them.</p>-->
+                    <!--</div>-->
+                    <!--<div class="text-center">-->
+                        <!--<img class="customer-photo" src="assets/images/customer.png" alt="" />-->
+                        <!--<h6 class="customer-name">Mark Renton</h6>-->
+                        <!--<p class="customer-description">Intuitive website. Best online resume & cover letter builder. Employeers are responsive. Should you have any concern question, you can interract with them.</p>-->
+                    <!--</div>-->
+                <!--</slick>-->
+            <!--</div>-->
+
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<footer class="hidden-md hidden-lg hidden-sm">-->
+    <!--<div class="content">-->
+        <!--<div class="footer-content">-->
+            <!--<div class="container-fluid">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-sm-3">-->
+                        <!--<div class="item">-->
+                            <!--<img class="footer-logo-img" src="../assets/images/logo.png">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-3">-->
+                        <!--<div class="item">-->
+                            <!--<p>+961311566</p>-->
+                            <!--<p><a href="">info@moodfit.com</a></p>-->
+                            <!--<p class="icons-content">-->
+                                <!--<i class="fa fa-facebook" aria-hidden="true"></i>-->
+                                <!--<i class="fa fa-instagram" aria-hidden="true"></i>-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-3">-->
+                        <!--<div class="item">-->
+                            <!--<p><a href="">About</a></p>-->
+                            <!--<p><a href="">Privacy Policy</a></p>-->
+                            <!--<p><a href="">Terms of use</a></p>-->
+                            <!--<p><a href="">Our Team</a></p>-->
+                            <!--<p><a href="">FAQ</a></p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-3">-->
+                        <!--<div class="item text-right join-us-content">-->
+                            <!--<p>Are you a talented designer as well?</p>-->
+                            <!--<button class="btn join-us-btn">JOIN US NOW</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="footer-copyright">-->
+            <!--<p class="text-center">Copyright 2017. All rights reserved</p>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</footer>-->
+<script>
+    $(document).ready(function(){
+        window.scrollTo(0, 0);
+    })
+</script>

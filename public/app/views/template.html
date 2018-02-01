@@ -1,0 +1,139 @@
+<main ng-controller="welcomeController" class="template-page-main">
+    <header class="template-page-header">
+        <!--<div class="header-slider slider">
+            <slick  settings="headerSlickConfig">
+                <div>
+                    <img class="blue-background" src="assets/images/home_background.png" alt="" />
+                </div>
+                <div>
+                    <img class="purple-background" src="assets/images/background2.png" alt="" />
+                </div>
+                <div>
+                    <img class="yellow-background" src="assets/images/background3.png" alt="" />
+                </div>
+                <div>
+                    <img class="green-background" src="assets/images/background4.png" alt="" />
+                </div>
+            </slick>
+        </div>-->
+        <div class="header-navbar-content-a">
+            <div class="header-navbar content">
+                <a href="#">
+                    <img id="templateHeaderLogo" src="assets/images/logo.png" class="header-logo-img hidden-xs">
+                </a>
+                <a href="#">
+                    <img src="assets/images/logo2.png" class="header-logo-img visible-on-xs">
+                </a>
+                <button type="button" class="navbar-toggle collapsed">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="menu-content">
+                    <ul class="ul_templat_page_color_night_blue">
+                        <li><a href="#howitworks">How it works</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#templates">Templates</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a ng-if="userLoggined" href="#!login">Login</a></li>
+                    </ul>
+                    <div class="sign-up-content">
+                        <a href="#!/signup"><button ng-if="userLoggined" class="btn blue-btn sign-up-btn">SIGN UP</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="content">
+            <div class="slider-content">
+                <h2 id="headerTextContent">We Help You Land <br>Your Dream Job</h2>
+                <div class="header-start-now">
+                    <p>Your hassle-free, professional website is just a few clicks away!</p>
+                    <button class="btn blue-btn start-now-btn">Start Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="mouse-img">
+            <img src="assets/images/mouse.png" alt="">
+        </div>-->
+    </header>
+    <section class="choose-templates-content">
+        <div class="container">
+            <h2>Select your favorite resume template</h2>
+            <h5 class="visible-xs">Tap template screen for live preview</h5>
+            <div class="row">
+                <div class="col-sm-6 templates-content" ng-repeat="template in templates | limitTo : pageSize : (currentPage - 1) * pageSize">
+                    <div class="item text-center">
+                        <div class="image-content">
+                            <img src="assets/images/laptop.png" alt="">
+                            <img ng-src="{{ template.image }}" class="laptop-template-img" alt="">
+                            <div class="item-hover-content">
+                                <div class="buttons-content">
+                                    <div>
+                                        <a ng-href='{{template.url}}' target="_blank"><button class="btn preview-btn">Preview</button></a>
+                                        <!--<button class="btn green-btn" ng-click="selectedTemplate()"><a class="a_template_button" href="#!/resume">Buy Now</a></button>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h5>{{ template.name }}</h5>
+                        <a ng-click="selectedTemplate(template.id,template.name)" class="btn blue-btn btn-stroked-light" >Select Template</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--<section class="choose-templates-pagination">-->
+        <!--<ul class="pager">-->
+            <!--<li><a ng-click="prevAllPage()"><<</a></li>-->
+            <!--<li><a ng-click="prevNumberPage()"><</a></li>-->
+            <!--<li ng-repeat="i in rangePage"><a ng-class=" (i == currentPage)? 'active_page' :''" ng-click="nextPage(i)">{{i}}</a></li>-->
+            <!--<li><a ng-click="nextNumberPage()"> > </a></li>-->
+            <!--<li><a ng-click="nextAllPage()"> >> </a></li>-->
+        <!--</ul>-->
+    <!--</section>-->
+    <footer>
+        <div class="content">
+            <div class="footer-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="item">
+                                <a href="#">
+                                    <img class="footer-logo-img" src="../assets/images/logo2.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="item">
+                                <p>+961311566</p>
+                                <p><a href="">info@moodfit.com</a></p>
+                                <p class="icons-content">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="item">
+                                <p><a href="#!/about">About</a></p>
+                                <p><a href="#!/privacy-policy">Privacy Policy</a></p>
+                                <p><a href="#!/terms-of-use">Terms of use</a></p>
+                                <p><a href="#!/contact-us">Contact Us</a></p>
+                                <p><a href="#!/faq">FAQ</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p class="text-center">Copyright 2017. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+</main>
+<script>
+    $(document).ready(function(){
+        window.scrollTo(0, 0);
+    })
+</script>

@@ -1,0 +1,276 @@
+.template-page-header .header-navbar ul li,
+.template-page-header .header-navbar ul li a {
+    color: #fff;
+}
+.template-page-header .header-navbar .sign-up-btn.btn {
+    color: #fff;
+    border: 1px solid #fff;
+}
+header.template-page-header {
+    height: initial;
+    background-color: transparent;
+    z-index: 1000;
+}
+.choose-templates-content {
+   /* padding-bottom: 30px;*/
+    background: linear-gradient(#2b87f9, white);
+    position: relative;
+    top: -80px;
+    z-index: 0;
+    padding-top: 80px;
+}
+.choose-templates-content h2 {
+    font-family: latolight;
+    font-size: 38px;
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.choose-templates-content h5 {
+    font-family: latolight;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+}
+.laptop-template-img {
+    position: absolute;
+    width: 66%;
+    height: 88%;
+    top: 12px;
+    left: -4px;
+    right: 0;
+    margin: auto;
+}
+.templates-content .item {
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+.templates-content .item .image-content {
+    position: relative;
+}
+
+.templates-content .item h5 {
+    font-family: latolight;
+    color: #292929;
+    font-size: 22px;
+    text-align: center;
+    padding: 0px 10px;
+    font-weight: bold;
+}
+.templates-content .item .item-hover-content {
+    position: absolute;
+    opacity: .9;
+    visibility: hidden;
+    border: 1px solid #dfdfdf;
+    display: flex;
+    /* transition: all .4s ease; */
+    width: 66%;
+    height: 88%;
+    top: 12px;
+    left: -4px;
+    right: 0;
+    margin: auto;
+    background-color: #4b4b4b;
+}
+.preview-btn.btn {
+    display: inline-block;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 10px 25px;
+    border: 1px solid #fafafa;
+    color: #fafafa;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border-radius: 50px;
+    -o-transition: color .2s ease-in,background-color .2s ease-in;
+    transition: color .2s ease-in,background-color .2s ease-in;
+}
+.preview-btn.btn:hover {
+    text-decoration: none;
+    color: #4b4b4b;
+    background-color: #fafafa;
+    -o-transition: color .2s ease-in,background-color .2s ease-in;
+    transition: color .2s ease-in,background-color .2s ease-in;
+}
+.info-icon-content {
+    align-self: flex-end;
+    padding: 15px 20px;
+}
+.info-icon-content img {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+.buttons-content {
+    align-self: center;
+    text-align: center;
+    width: 40%;
+}
+.buttons-content button.blue-btn {
+    font-size: 22px;
+    font-family: Lato_Regular;
+    width: 128px;
+    height: 56px;
+    display: block;
+    margin: 10px auto;
+}
+button.green-btn.btn {
+    font-size: 22px;
+    font-family: Lato_Regular;
+    width: 128px;
+    height: 56px;
+    display: block;
+    margin: 10px auto;
+    background-color: #1bc873;
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    transition: background-color .2s ease-in,box-shadow .4s ease-in;
+}
+.alert_template_a .green-btn.btn {
+    width: 305px;
+    height: 68px;
+    border-radius: 4px;
+    margin-top: 75px;
+    font-size: 25px;
+}
+.green-btn.btn:hover {
+    background-color: #1aaf66;
+    box-shadow: 0 0 0 3px rgba(26, 175, 102, 0.5);
+}
+.template-on-phone {
+    width: 50%;
+    align-self: flex-end;
+    text-align: center;
+}
+.templates-content .item .image-content:hover .item-hover-content {
+    visibility: visible;
+}
+.choose-templates-pagination{
+    font-family: latolight;
+    color: #212121;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.pager li>a{
+    border-width: 0;
+    border:0;
+    font-size: 21px;
+    cursor: pointer;
+}
+.pager li>a:hover{
+
+}
+.a_template_button{
+    color:white;
+}
+.a_template_button:hover{
+    color:white;
+}
+
+.progress {
+    background: none;
+}
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
+    font-family: Lato_Semibold;
+    color: #b2bcc7;
+    font-size: 15px;
+}
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum.active {
+    color: #2b87f9;
+}
+.alert_template_a {
+    position:fixed;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    margin:auto;
+    z-index: 100;
+}
+.alert_template_a img {
+    z-index: 10000;
+    position: absolute;
+    width: 70%;
+    height: auto;
+    top: 190px;
+    left: 0;
+    right: 0;
+    border: 0;
+    margin: auto;
+}
+.pop-up-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+    z-index: 10;
+}
+.templates-content{
+    position: relative;
+}
+.active_page{
+    color: mediumblue;
+}
+.choose-templates-content .image-content img {
+    vertical-align: bottom;
+}
+.close-template-btn {
+    width: 20px;
+    height: 20px;
+    background: url("../images/close-menu-icon.png") no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: 13%;
+    top: 168px;
+    cursor: pointer;
+}
+.templates-content .item .btn.btn-stroked-light {
+    box-shadow: none;
+    border: 1px solid #181F4A;
+    color: #181F4A;
+    background-color: transparent;
+    /*transition: color, background-color .3s ease;*/
+}
+.templates-content .item .btn.btn-stroked-light:hover {
+    color: #fff;
+    background-color: #181F4A;
+}
+.template-page-header .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+.template-page-header .header-navbar ul li a:hover {
+    color: #fff;
+    opacity: .8;
+}
+@media(max-width: 767px) {
+    .choose-templates-content h2 {
+        font-size: 32px;
+    }
+    .templates-content .item h5 {
+        font-size: 16px;
+        padding: 0px 10px 15px 10px;
+    }
+    .template-page-header .navbar-toggle .icon-bar {
+        background-color: #000;
+    }
+    .choose-templates-content {
+        padding-top: 50px;
+    }
+}

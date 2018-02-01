@@ -1,0 +1,48 @@
+<main ng-controller="templateController" class="template-page-main">
+    <header class="template-page-header">
+        <div class="header-navbar-content black_header_template_page">
+
+            <div class="content">
+                <a href="#!/">
+                    <img src="assets/images/logo.png" class="header-logo-img" id="headerLogo">
+                </a>
+                <div class="pull-right">
+                    <ul>
+                        <li>
+                            <div>
+                                <a class="a_template_button" ng-href="#!/resume"><button class="btn btn-success-light" ng-click="selectedTemplate()">Select Template</button></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section>
+        <div ng-include="templatecurr.url"></div>
+        <!--<div ng-include src="'{{ templatecurr.url }}'"></div>-->
+        <!--<div class="container">
+            <h2>{{ templatecurr.name }}</h2>
+            <div class="row">
+                <div class="col-sm-6 templates-content">
+                    <div class="item">
+                        <div class="image-content">
+                            <img src="assets/images/laptop.png" alt="">
+                            <img ng-src="{{ templatecurr.image }}" class="laptop-template-img" alt="">
+                        </div>
+                        <h5>{{ templatecurr.name }}</h5>
+                        <a ng-click="selectedTemplate()" ng-href="#!/resume" class="btn btn-stroked-light">Select Template</a>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </section>
+
+</main>
+<script>
+    $(document).ready(function(){
+        window.scrollTo(0, 0);
+    })
+</script>

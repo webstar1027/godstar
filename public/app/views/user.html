@@ -1,0 +1,19 @@
+
+<div ng-cloak class="container"  ng-controller="loginController">
+    <div class="jumbotron">
+        <div class="panel-group">
+            <div class="panel panel-success">
+                <h2 class="text-warning">Hello {{ user.name }} !!!</h2>
+                <div class="panel-body"><a href="#!"> Main Page</a></div>
+                <div ng-click="logout()" class="panel-body"><a href="#!"> Logout</a></div>
+                <!--<button ng-click="logout()" class="btn btn-danger">logout</button>-->
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        window.scrollTo(0, 0);
+    })
+</script>

@@ -1,0 +1,98 @@
+
+
+<div class="billing-page domain-name-page select-hosting-page" ng-controller="billingController">
+    <div class="container">
+        <div class="login-header-logo">
+            <a href="#!/">
+                <img src="assets/images/logo.png" class="header-logo-img">
+            </a>
+        </div>
+        <div class="billing-info-content billing-info-content-top">
+            <div class="domain-name-content select-hosting-content">
+                <h3>Select A Discounted Hosting Plan</h3>
+                <!--<h6>Hosting is necessary to get your resume off the ground!</h6>-->
+                <h6>Hosting is necessary to get your resume site up and running!
+                    <span class="white-underline-btn white-underline-btn-a-only" data-toggle="modal" data-target="#whatHostinModal"> What is Hosting?</span>
+                </h6>
+            </div>
+
+            <div class="row amt-10">
+                <div class="col-sm-6">
+                    <div class="select-item pull-right">
+                        <div class="select-item-header">
+                            <p>Monthly Plan</p>
+                            <h2>$14.99 <span>/month</span></h2>
+                            <h6>Billed month to month</h6>
+                        </div>
+                        <div class="select-item-content">
+                            <ul>
+                                <li class="active">All Resume Templates</li>
+                                <li class="active">Custom Entries & Categories</li>
+                                <li class="active">Connect Your Domain</li>
+                                <li class="active">Remove HipRez Ads</li>
+                                <li class="active">VIP Support</li>
+                                <li class="active">Cancel Anytime</li>
+                            </ul>
+                            <div class="text-center">
+                                <button ng-if="unclickButton" ng-click="selectSubsciption('1499')" class="btn select-btn">Get Monthly Plan</button>
+                                <img  ng-style="gifFirst" class="gif_wait" ng-src="img/giphy.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="select-item">
+                        <div class="select-item-header">
+                            <p>Annual Plan</p>
+                            <h2>$7.99 <span>/month</span></h2>
+                            <h6>Save <span class="bold_money_green_a">$84</span> with this popular option billed annually ($95 / year)</h6>
+                        </div>
+                        <div class="select-item-content">
+                            <ul>
+                                <li class="active">All Resume Templates</li>
+                                <li class="active">Custom Entries & Categories</li>
+                                <li class="active">Connect Your Domain</li>
+                                <li class="active">Remove HipRez Ads</li>
+                                <li class="active">VIP Support</li>
+                                <li class="active">Cancel Anytime</li>
+                            </ul>
+                            <div class="text-center">
+                                <button ng-if="unclickButton" ng-click="selectSubsciption('799')" class="btn select-btn">Get Annual Plan</button>
+                                <img ng-style="gifSecond" class="gif_wait" ng-src="img/giphy.gif" alt="">
+                            </div>
+                        </div>
+                        <!--<div class="save-money">
+                            <p>Save! <br> $84</p>
+                        </div>-->
+                        <img class="popular_bad_icon_image_a" src="../../img/popular.png" alt="Popular_Bad">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p class="text-center color_white_text_a_f  color_white_text_a_f_m color_white_text_a_f_w">
+                    <a href="/#!/timelimite">No Thanks, I will purchase my own hosting</a>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-2 hidden-sm hidden-xs"></div>
+    </div>
+</div>
+<div class="modal fade" id="whatHostinModal" role="dialog">
+    <div class="modal-dialog what-is-hosting">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">What Is Hosting?</h4>
+                </div>
+                <p>All websites you see online are hosted and stored on the internet by specialized computers called, Servers.  The Hiprez Hosting option is a unique hosting service that allows all our customers to post their resume website onto the Internet at a discounted rate vs other service providers. In addition to our discounted rates, Hiprez will also provide of all technical integrations and ongoing maintenance required to keep your webpage on the internet.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        $(window).scrollTop(0);
+    })
+</script>

@@ -1,0 +1,237 @@
+
+<div class="wrapper login-page" ng-controller="loginController">
+    <div class="container-fluid">
+        <div class="login-header-logo visible-xs m-b-0">
+            <a href="#!/">
+                <img src="../../assets/images/logo2.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!--==== MODAL ====-->
+    <div class="modal show" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="a_new_dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h1 class="caption-modal text-center">Log In</h1>
+                    <div class="modal-inside clearfix modal-inside-common-content">
+                        <!--<div class="modal-item pull-right visible-xs m-b-30 first-item-flex">
+                            <div class="modal-item pull-right text-right m-b-30">
+                                <span class="acc">New to HipRez?</span> <a href="#!signup" class="Signup">Sign up</a>
+                            </div>
+                            <div class="social-box">
+                                <a class="a_social_pointer" ng-click="getMyLastName()">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <span>Continue With Facebook</span>
+                                </a>
+
+                                <a class="a_social_pointer" id="googleAlert" ng-click="signInGoogle()">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    <span>Continue With Google</span>
+                                </a>
+
+                                <a  ng-click="signInLinkedin()">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    <span>Continue With Linkedln</span>
+                                </a>
+                            </div>
+                        </div>-->
+                        <div class="modal-item pull-left first-item-flex">
+                            <form class="form" ng-submit="login()">
+                                {{ csrf_field() }}
+                                <div ng-style="errorValidationEmailLogin" class="error_validation_email">Something is wrong!</div>
+                                <input type="email" placeholder="Email" name="email" ng-model="email" required>
+                                <input type="password" placeholder="Password" name="password" ng-model="password" required>
+                                <button type="submit" class="submit">Log In</button>
+                            </form>
+                            <div class="modal-inside clearfix left-modal-inside forgot-psw-content">
+                                <div class="modal-item pull-left">
+                                    <a href="#" class="forgot a_forgot">Forgot password ?</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-item pull-left a_vertical_line hidden-xs second-item-flex"></div>
+                        <div class="or-use-email second-item-flex">
+                            <div class="separator"></div>
+                            <div class="text ng-binding">Or use your email</div>
+                            <div class="separator"></div>
+                        </div>
+
+                        <div class="modal-item pull-right third-item-flex">
+                            <div class="visible-xs modal-item pull-right text-right p-b-20">
+                                <span class="acc">New to HipRez?</span> <a href="#!signup" class="Signup">Sign up</a>
+                            </div>
+                            <div class="social-box">
+                                <a class="a_social_pointer" ng-click="getMyLastName()">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <span>Continue With Facebook</span>
+                                </a>
+
+                                <a class="a_social_pointer googleAlertFunc" id="googleAlert">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    <span>Continue With Google</span>
+                                    <div id="google_sign_up_hidden" class="g-signin2 google_sign_up_hidden_a" data-onsuccess="onSignIn"></div>
+                                </a>
+
+                                <a  ng-click="signInLinkedin()">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    <span>Continue With Linkedln</span>
+                                </a>
+                            </div>
+                            <div class="modal-inside clearfix hidden-xs">
+                                <div class="modal-item pull-right text-right">
+                                    <span class="acc">Don't have an account?</span> <a href="#!signup" class="Signup">Sign up</a>
+                                </div>
+                            </div>
+                            <span data-token="" class="googleAlertFuncSign" ng-click="signInGoogle()"></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==== END MODAL ====-->
+</div>
+<footer class="hidden-sm hidden-md hidden-lg">
+    <div class="content">
+        <div class="footer-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="item">
+                            <p>+961311566</p>
+                            <p><a href="">info@moodfit.com</a></p>
+                            <p class="icons-content">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="item">
+                            <p><a href="#!/about">About</a></p>
+                            <p><a href="#!/privacy-policy">Privacy Policy</a></p>
+                            <p><a href="#!/terms-of-use">Terms of use</a></p>
+                            <p><a href="#!/contact-us">Contact Us</a></p>
+                            <p><a href="#!/faq">FAQ</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-copyright">
+            <p class="text-center">Copyright 2017. All rights reserved</p>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://platform.linkedin.com/in.js">
+ //   api_key: 78ko2txzlnf7ln
+    api_key: 868gg3hylwhij0
+     authorize: false
+    //    onLoad: LinkedinService.signInLinkedinFunction();
+</script>
+
+<script>
+    $(document).ready(function(){
+        window.scrollTo(0, 0);
+    })
+</script>
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script>
+
+//    $.ajaxSetup({
+//        headers: {
+//            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//        }
+//    });
+//
+//    function onSignIn(googleUser) {
+//
+//        var profile = googleUser.getBasicProfile();
+//        var provider_id = profile['Eea'];
+//        var name = profile['ig'];
+//        var email = profile['U3'];
+//
+//        $.ajax({
+//            type: "POST",
+//            url:'/login/google/v1',
+//            data: {'gid':provider_id,'name':name,'email':email},
+//            success: function( msg ) {
+//                tokens = msg.token;
+//                localStorage.setItem('token', tokens);
+//                $('.googleAlertFuncSign').click();
+//            }
+//        });
+//    }
+//
+//    $(document).ready(function(){
+//
+//        $('#googleAlert').click(function(){
+//
+//            gapi.load('auth2', function(){
+//                auth2 = gapi.auth2.init({
+//                    client_id: '546486351299-k762ctc95v9r026aued34bvfhc72v4b5.apps.googleusercontent.com',
+//                    cookiepolicy: 'single_host_origin',
+//                    scope: 'profile email'
+//                });
+//            });
+//
+//        });
+//    });
+
+
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+clicid = false;
+
+function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+
+    var provider_id = profile['Eea'];
+    var name = profile['ig'];
+    var email = profile['U3'];
+
+    if(clicid){
+        $.ajax({
+            type: "POST",
+            url: '/login/google/v1',
+            data: {'gid': provider_id, 'name': name, 'email': email},
+            success: function (msgjj) {
+                tokens = msgjj.token;
+                if (typeof(tokens) == 'undifind') {
+                    clicid = false;
+                    return false;
+                } else {
+                    clicid = false;
+                    $('.googleAlertFuncSign').click();
+                }
+            }
+        });
+    }
+}
+
+$(document).ready(function(){
+
+    $('#googleAlert').click(function(){
+        clicid = true;
+        gapi.load('auth2', function(){
+            auth2 = gapi.auth2.init({
+                client_id: '546486351299-k762ctc95v9r026aued34bvfhc72v4b5.apps.googleusercontent.com',
+                cookiepolicy: 'single_host_origin',
+                scope: 'profile email'
+            });
+        });
+    });
+});
+
+
+
+</script>
+
